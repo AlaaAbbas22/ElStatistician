@@ -173,7 +173,7 @@ def mode():
                 session["hist"].append(sentence)
             else:
                 session["hist"] = [sentence]               
-            return {"result": result}
+            return {"result": f"{result}"}
         except:
             return {"result":""}
 
@@ -287,7 +287,7 @@ def myciah():
                 session["hist"].append(sentence)
             else:
                 session["hist"] = [sentence]               
-            return {"result": result} 
+            return {"result": f"{result}"} 
         except:
             return {"result":""}
     try:
