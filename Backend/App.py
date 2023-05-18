@@ -67,28 +67,28 @@ def myci(mean, SD, n, confidence_level):
     #confidence interval = point estimate plus or minus T-score X SE
     return [round(mean-SE*stats.t.ppf(1-0.5*(1-confidence_level), df),3), round(mean+SE*stats.t.ppf(1-0.5*(1-confidence_level), df),3)]
 
-def filter(data,column, json):
-    if 'filterBy' not in json.keys():
+def filter(data,column, json1):
+    if 'filterBy' not in json1.keys():
         return list(data[column]), "(No filter)"
     else:
         try:
-            comparison = float(json['comparison'].strip())
+            comparison = float(json1['comparison'].strip())
         except:
-            comparison = json['comparison']
-        match json['HowFilter']:    
+            comparison = json1['comparison']
+        match json1['HowFilter']:    
             case ">":
-                r = data[json["filterBy"]]>comparison
+                r = data[json1["filterBy"]]>comparison
             case "⋝":
-                r = data[json["filterBy"]]>=comparison
+                r = data[json1["filterBy"]]>=comparison
             case "=":
-                r = data[json["filterBy"]]==comparison
+                r = data[json1["filterBy"]]==comparison
             case "<":
-                r = data[json["filterBy"]]<comparison
+                r = data[json1["filterBy"]]<comparison
             case "⋜":
-                r = data[json["filterBy"]]<=comparison
+                r = data[json1["filterBy"]]<=comparison
             case "≠":
-                r = data[json["filterBy"]]!=comparison
-        return list(data[column][r]), f"Filter: {json['filterBy']} {json['HowFilter']} {comparison}"
+                r = data[json1["filterBy"]]!=comparison
+        return list(data[column][r]), f"Filter: {json1['filterBy']} {json1['HowFilter']} {comparison}"
 
 
 
