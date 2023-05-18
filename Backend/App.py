@@ -350,19 +350,18 @@ def mysig():
                     comparison = float(AllData["comparison"].strip())
                 except:
                     comparison = AllData["comparison"]
-                match AllData["HowFilter"]:
-                    case ">":
-                        r1 = df1[AllData['filterBy']]>comparison
-                    case "⋝":
-                        r1 = df1[AllData["filterBy"]]>=comparison
-                    case "=":
-                        r1 = df1[AllData["filterBy"]]==comparison
-                    case "<":
-                        r1 = df1[AllData["filterBy"]]<comparison
-                    case "⋜":
-                        r1 = df1[AllData["filterBy"]]<=comparison
-                    case "≠":
-                        r1 = df1[AllData["filterBy"]]!=comparison
+                if AllData["HowFilter"]== ">":
+                    r1 = df1[AllData['filterBy']]>comparison
+                elif AllData["HowFilter"]== "⋝":
+                    r1 = df1[AllData["filterBy"]]>=comparison
+                elif AllData["HowFilter"]== "=":
+                    r1 = df1[AllData["filterBy"]]==comparison
+                elif AllData["HowFilter"]== "<":
+                    r1 = df1[AllData["filterBy"]]<comparison
+                elif AllData["HowFilter"]== "⋜":
+                    r1 = df1[AllData["filterBy"]]<=comparison
+                elif AllData["HowFilter"]== "≠":
+                    r1 = df1[AllData["filterBy"]]!=comparison
             
                 data1 = df1[AllData["column"]][r1]
             else:
@@ -376,19 +375,18 @@ def mysig():
                     comparison2 = float(AllData["comparison2"].strip())
                 except:
                     comparison2 = AllData["comparison2"]
-                match AllData["HowFilter2"]:
-                    case ">":
-                        r2 = df2[AllData['filterBy2']]>comparison2
-                    case "⋝":
-                        r2 = df2[AllData["filterBy2"]]>=comparison2
-                    case "=":
-                        r2 = df2[AllData["filterBy2"]]==comparison2
-                    case "<":
-                        r2 = df2[AllData["filterBy2"]]<comparison2
-                    case "⋜":
-                        r2 = df2[AllData["filterBy2"]]<=comparison2
-                    case "≠":
-                        r2 = df2[AllData["filterBy2"]]!=comparison2
+                if AllData["HowFilter2"]== ">":
+                    r2 = df2[AllData['filterBy2']]>comparison2
+                elif AllData["HowFilter2"]== "⋝":
+                    r2 = df2[AllData["filterBy2"]]>=comparison2
+                elif AllData["HowFilter2"]== "=":
+                    r2 = df2[AllData["filterBy2"]]==comparison2
+                elif AllData["HowFilter2"]== "<":
+                    r2 = df2[AllData["filterBy2"]]<comparison2
+                elif AllData["HowFilter2"]== "⋜":
+                    r2 = df2[AllData["filterBy2"]]<=comparison2
+                elif AllData["HowFilter2"]== "≠":
+                    r2 = df2[AllData["filterBy2"]]!=comparison2
                 data2 = df2[AllData["column2"]][r2]
             else:
                 data2 = df2[AllData["column2"]]
