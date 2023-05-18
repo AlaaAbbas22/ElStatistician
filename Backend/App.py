@@ -75,19 +75,18 @@ def filter(data,column, json1):
             comparison = float(json1['comparison'].strip())
         except:
             comparison = json1['comparison']
-        match json1['HowFilter']:    
-            case ">":
-                r = data[json1["filterBy"]]>comparison
-            case "⋝":
-                r = data[json1["filterBy"]]>=comparison
-            case "=":
-                r = data[json1["filterBy"]]==comparison
-            case "<":
-                r = data[json1["filterBy"]]<comparison
-            case "⋜":
-                r = data[json1["filterBy"]]<=comparison
-            case "≠":
-                r = data[json1["filterBy"]]!=comparison
+        if json1['HowFilter'] ==  ">":
+            r = data[json1["filterBy"]]>comparison
+        elif json1['HowFilter'] == "⋝":
+            r = data[json1["filterBy"]]>=comparison
+        elif json1['HowFilter'] == "=":
+            r = data[json1["filterBy"]]==comparison
+        elif json1['HowFilter'] == "<":
+            r = data[json1["filterBy"]]<comparison
+        elif json1['HowFilter'] == "⋜":
+            r = data[json1["filterBy"]]<=comparison
+        elif json1['HowFilter'] == "≠":
+            r = data[json1["filterBy"]]!=comparison
         return list(data[column][r]), f"Filter: {json1['filterBy']} {json1['HowFilter']} {comparison}"
 
 
