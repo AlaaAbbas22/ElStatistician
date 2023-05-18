@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import CSV from './CSV'
 import TEM from './TEM'
 import log from "../../public/El statistician (3).png"
 
-const Mean = ({ baseURL }) => {
+const Mean = ({ baseURL }: {baseURL: String}) => {
       // setting vars
   const [mean, setmean] = useState(0)
   const [meancsv, setmeancsv] = useState(0)

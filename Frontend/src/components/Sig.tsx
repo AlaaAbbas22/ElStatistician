@@ -5,13 +5,13 @@ import SIGCSV from './SIGCSV'
 import log from "../../public/El statistician (3).png"
 
 
-const SIG = ({ baseURL }) => {
+const SIG = ({ baseURL }: {baseURL:String}) => {
       // setting vars
   const [p, setp] = useState(0)
   const [g, setg] = useState(0)
   const [tails, settails] = useState("2")
   const [res, setres] = useState("The test is not done yet")
-  const [Siglevel, setSiglevel] = useState(5)
+  const [Siglevel, setSiglevel] = useState("5")
   const [numbers, setnumbers] = useState("")
   const [numbers2, setnumbers2] = useState("")
 
@@ -78,7 +78,7 @@ const SIG = ({ baseURL }) => {
                 </div>
           </div>
           <div className='p-2'>
-            <label for="Sig-leve"> Significance level (α) = </label> 
+            <label htmlFor="Sig-leve"> Significance level (α) = </label> 
             <input className='w-[30px] text-black mycenter' value={Siglevel} max="100" min="0" onChange={handleChangeSiglevel} type='number' id="confidence-level"/> %<br/><br/>
             <select id="tails" value={tails} onChange={(e)=>{settails(e.target.value)}} className='text-black p-2'>
                 <option value=">">1-tailed test (H1: Sample1 &#62; Sample2)</option>

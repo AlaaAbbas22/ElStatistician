@@ -3,8 +3,7 @@ import {
   RouterProvider,
   Link,
   Outlet,
-  useLocation,
-} from "react-router-dom";
+  } from "react-router-dom";
 import './App.css'
 import Mean from './components/Mean'
 import Median from './components/Median'
@@ -18,7 +17,6 @@ import SIG from "./components/Sig";
 import History from "./components/History";
 import logo from "../public/El statistician (2).png"
 import img from "../public/El statistician (1).png"
-import { useEffect, useState } from "react";
 
 
 const baseURL = "http://127.0.0.1:8000"

@@ -5,7 +5,7 @@ import CSVSTD from './CSVSTD'
 import log from "../../public/El statistician (3).png"
 
 
-const STD = ({ baseURL }) => {
+const STD = ({ baseURL }: {baseURL: any}) => {
       // setting vars
   const [std, setstd] = useState(0)
   const [sample, setSample] = useState("Sample")

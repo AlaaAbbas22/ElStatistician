@@ -3,7 +3,7 @@ import CSV from './CSV'
 import TEM from './TEM'
 import log from "../../public/El statistician (3).png"
 
-const Range = ({ baseURL }) => {
+const Range = ({ baseURL }: {baseURL: String}) => {
       // setting vars
   const [range, setrange] = useState(0)
   const [rangecsv, setrangecsv] = useState(0)

@@ -1,10 +1,9 @@
 import React from 'react'
 import axios from 'axios';
 import { useState } from 'react';
-import Getter from './Getter';
 
 
-const TEM = ({baseURL, URL, result, funcset, symbol}) => {
+const TEM = ({baseURL, URL, result, funcset, symbol}:{baseURL: any, URL: any, result: any, funcset: any, symbol:any}) => {
     const [numbers, setnumbers] = useState("")
     axios.defaults.withCredentials = true
 

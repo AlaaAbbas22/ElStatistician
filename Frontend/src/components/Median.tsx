@@ -3,7 +3,7 @@ import CSV from './CSV'
 import TEM from './TEM'
 import log from "../../public/El statistician (3).png"
 
-const Median = ({ baseURL }) => {
+const Median = ({ baseURL }: {baseURL: String}) => {
       // setting vars
   const [median, setmedian] = useState(0)
   const [mediancsv, setmediancsv] = useState(0)

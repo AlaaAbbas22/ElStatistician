@@ -1,12 +1,12 @@
 import Getter from "./Getter"
 import { useState, useEffect } from "react"
 
-const History = ({baseURL}) => {
+const History = ({baseURL}: {baseURL: String}) => {
     const [num, setnum] = useState(0)
-    const [MyHistory, setMyHistory] = useState([])
+    const [MyHistory, setMyHistory] = useState([<div className="text-slate-900 text-3xl p-5"></div>])
 
 
-  const deleteitem = async (e) => {
+  const deleteitem = async (e: any) => {
     await Getter.post(`${baseURL}/deleteitem`,{id: e.target.id}, {
       withCredentials: true,
       headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
@@ -17,17 +17,17 @@ const History = ({baseURL}) => {
       withCredentials: true,
       headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
   }}).then( function (response) {
-    let newc = []
+    let newc: Array<JSX.Element> = []
     if (response.data.result[0] == "No history"){
-      newc = <div className="text-slate-900 text-3xl p-5"> No history</div>
+      newc = [<div className="text-slate-900 text-3xl p-5"> No history</div>]
       setMyHistory(newc)
     } else {
-    response.data.result.map((item, index: Number)=>{
-      let elem = []
-      item.map((i, ix)=>{
+    response.data.result.map((item: Array<Array<String|Array<String>>>, index: Number)=>{
+      let elem: Array<JSX.Element> = []
+      item.map((i: Array<String|Array<String>>, ix: Number)=>{
         if (ix == item.length-1){
           
-          i.map((it, lastindex)=>elem.push(<span className="indent-8 p-3  "><a href={it} target="_blank" className="text-blue-700 hover:underline">Dataset ({lastindex+1})</a><br/></span>)  )
+          i.map((it, lastindex)=>elem.push(<span className="indent-8 p-3  "><a href={String(it)} target="_blank" className="text-blue-700 hover:underline">Dataset ({lastindex+1})</a><br/></span>)  )
         } else {
         elem.push(<span className="indent-8 p-3">{i}<br/></span>)}
       }),

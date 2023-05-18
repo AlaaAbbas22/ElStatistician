@@ -6,7 +6,7 @@ import log from "../../public/El statistician (3).png"
 
 
 
-const CI = ({ baseURL }) => {
+const CI = ({ baseURL }:{ baseURL: String}) => {
       // setting vars
   const [ci, setci] = useState("[0,0]")
   const [conlevel, setConlevel] = useState(95)
@@ -35,7 +35,7 @@ const CI = ({ baseURL }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setnumbers(e.target.value)
   }
-  const handleChangeConlevel = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeConlevel = (e: any) => {
     setConlevel(e.target.value)
   }
   const [cicsv, setcicsv] = useState("[0,0]")
@@ -57,7 +57,7 @@ const CI = ({ baseURL }) => {
           <input name= "numbers" id = "large-input" value = {numbers} placeholder='Type numbers separated by commas' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleChange}>
           </input>
           <div className='p-2'>
-            <label for="confidence-leve"> Confidence level = </label> 
+            <label htmlFor="confidence-leve"> Confidence level = </label> 
             <input className='w-[30px] text-black mycenter' value={conlevel} max="100" min="0" onChange={handleChangeConlevel} type='number' id="confidence-level"/> %
           </div>
         
