@@ -19,7 +19,7 @@ import logo from "../public/El statistician (2).png"
 import img from "../public/El statistician (1).png"
 
 
-const baseURL = "http://127.0.0.1:8000"
+const baseURL = "https://el-statistician-api.onrender.com"
 
 
 
