@@ -6,10 +6,11 @@ from collections import Counter
 from scipy import stats
 import pandas as pd
 from datetime import timedelta
+import os
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "pass"
+app.config["SECRET_KEY"] = os.environ["Key"]
 app.config["SESSION_TYPE"] = 'filesystem'
 app.config.update(
     SESSION_COOKIE_SECURE=True,
@@ -459,4 +460,4 @@ def clearitem():
     del session["hist"][int(request.json["id"])] 
     return {"result": ["deleted successfully"]}
 if __name__ == '__main__': 
-    app.run(debug = True, port= 8000)
+    app.run(debug = True, port= 5000)
