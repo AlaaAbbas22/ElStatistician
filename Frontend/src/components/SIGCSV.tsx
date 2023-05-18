@@ -125,7 +125,7 @@ import { useState, useEffect } from 'react'
         <div className='grid md:grid-cols-9 grid-cols-4 gap-4'>
         <form onSubmit={handleSubmitcsv} id= "frm2" className="p-2 col-span-4">
             <h2 className='text-3xl'>Sample 1</h2>
-          <input name= "csv" id = "csv" value = {csv} placeholder='URL for csv file for the dataset' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleChangecsv}>
+          <input name= "csv" id = "csv" value = {csv} placeholder='URL for csv file for the dataset' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500' onChange={handleChangecsv}>
           </input>
             <div className='p-5'><label htmlFor="column"> Mean of&nbsp; </label>
                 <select id="column" name='column' className='text-gray-900' onChange={handleChangeColumn}>
@@ -157,7 +157,7 @@ import { useState, useEffect } from 'react'
             <h2 className='text-5xl  md:p-5 md:col-span-1 col-span-4'>VS</h2>
         <form onSubmit={handleSubmitcsv} id= "frm2" className="p-2 col-span-4">
         <h2 className='text-3xl'>Sample 2</h2>
-          <input name= "csv" id = "csv" value = {csv2} placeholder='URL for csv file for the dataset' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={(e)=> setcsv2(e.target.value)}>
+          <input name= "csv" id = "csv" value = {csv2} placeholder='URL for csv file for the dataset' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500' onChange={(e)=> setcsv2(e.target.value)}>
           </input>
             <div className='p-5'><label htmlFor="column"> Mean of&nbsp; </label>
                 <select id="column" name='column' className='text-gray-900' onChange={(e)=>{setcolumn2(e.target.value)}}>

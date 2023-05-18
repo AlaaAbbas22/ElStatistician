@@ -54,7 +54,7 @@ const CI = ({ baseURL }:{ baseURL: String}) => {
           <option value="CSV">Import a dataset from CSV file</option>
         </select>
         {csvor=="Numbers"&&<form onSubmit={handleSubmit} id= "frm1" className="p-2">
-          <input name= "numbers" id = "large-input" value = {numbers} placeholder='Type numbers separated by commas' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleChange}>
+          <input name= "numbers" id = "large-input" value = {numbers} placeholder='Type numbers separated by commas' className='mycenter block w-full md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500' onChange={handleChange}>
           </input>
           <div className='p-2'>
             <label htmlFor="confidence-leve"> Confidence level = </label> 

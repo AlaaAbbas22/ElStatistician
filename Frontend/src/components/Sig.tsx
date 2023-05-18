@@ -67,13 +67,13 @@ const SIG = ({ baseURL }: {baseURL:String}) => {
             <div className='grid md:grid-cols-9 grid-cols-4  gap-4'>
                 <div className='col-span-4'>
                     <h2 className='text-4xl p-2'>Sample 1</h2>
-                    <input name= "numbers" id = "large-input" value = {numbers} placeholder='Type numbers separated by commas' className='mycenter block w-full  md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleChange}>
+                    <input name= "numbers" id = "large-input" value = {numbers} placeholder='Type numbers separated by commas' className='mycenter block w-full  md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 ' onChange={handleChange}>
                     </input>
                 </div>
                 <h2 className='text-6xl text-center py-5 md:col-span-1 col-span-4'>VS</h2>
                 <div className='col-span-4'>
                     <h2 className='text-4xl p-2'>Sample 2</h2>
-                    <input name= "numbers2" id = "large-input2" value = {numbers2} placeholder='Type numbers separated by commas' className='mycenter block w-full  md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleChange2}>
+                    <input name= "numbers2" id = "large-input2" value = {numbers2} placeholder='Type numbers separated by commas' className='mycenter block w-full  md:p-5 p-2 text-sm md:text-2xl text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 ' onChange={handleChange2}>
                     </input>
                 </div>
           </div>

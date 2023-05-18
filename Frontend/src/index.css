@@ -104,3 +104,7 @@ select {
 #pageicon {
   border-radius: 50%;
 }
+
+input {
+  background: #ffffff;
+}
