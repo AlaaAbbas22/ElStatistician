@@ -10,5 +10,5 @@ El Statistician is a project for calculating and comparing different descriptive
 
 ## Getting started
 
-You can find the app <a href="https://el-statistician.vercel.app/">here</a>.
+You can find the app <a href="https://el-statistician.vercel.app/" target="_blank">here</a>.
 The app and the API were deployed using free services, so it might cause delays and crashes but would be sufficient for testing.
