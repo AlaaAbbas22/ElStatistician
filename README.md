@@ -1,7 +1,7 @@
 # El Statistician
 
 <p align="center">
-<img src="https://github.com/AlaaAbbas22/ElStatistician/blob/main/Frontend/public/El%20statistician%20(1).png" width="50%">
+<img src="https://github.com/AlaaAbbas22/ElStatistician/blob/main/Frontend/public/El%20statistician%20(1).png" width="70%">
 </p>
 
 ## What is this project about
